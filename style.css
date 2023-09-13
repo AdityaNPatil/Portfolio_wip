@@ -1,0 +1,642 @@
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+/*◘◘◘ NAVBAR ◘◘◘ */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    flex-wrap: wrap;
+
+    /* background-color: black; */
+    background: linear-gradient(to right,black,#301E67);
+    padding: 10px;
+    height: 1.8rem;
+}
+
+.navitem{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navitem a{
+    text-decoration: none;
+    color: #a5d7c8;
+}
+
+.navitem a:hover{
+    transition: all 0.5s ease-in-out 0s;
+    color: white;
+}
+
+.heading{
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+
+/*◘◘◘ MainLanding ◘◘◘ */
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items:center; */
+    gap:20px;
+    padding: 20px;
+    
+    border: 2px solid black;
+    
+    height: 100vh;
+    position: relative;
+    background-color: rgba(34, 2, 2,0.05);
+    color:#fff;
+    text-shadow: 5px 5px 5px black;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#main img{
+    display: none;
+}
+
+#main:hover{
+    transition: all 0.5s ease-in-out 0s;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.headingall{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+#myname{
+    font-family: 'Sacramento', cursive;
+}
+
+#main li{
+    list-style: none;
+    margin: 8px;
+    font-size: 2.2rem;
+}
+
+.resumedrive a{
+    color: #ffffff;
+    display: none;
+}
+
+#main::before{
+    content: "";
+    background: url('./images/profile_full_new_cpy.png') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    z-index: -1;
+    box-shadow: inset 0px 0px 45px 5px black;
+}
+
+#main::before:hover{
+    transition: all 0.5s ease-in-out 0s;
+    transform: scale(1.2); 
+}
+
+/*◘◘◘ Skills ◘◘◘*/
+#skills{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+
+    padding: 10px;
+    border: 2px solid black;
+
+    background-color: black;
+    color: #5B8FB9;
+}
+
+#skill-section-title{
+    grid-column: span 3;
+    font-size: 3rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right,black,#301E67,black);
+    width: 100%;
+}
+
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.skill-image{
+    height: 8rem;
+    width: auto;
+    border-radius: 10px;
+}
+
+.skill-head{
+    font-variant: small-caps;
+    font-weight: 900;
+    color: #BBE1FA;
+    font-size: 2rem;
+}
+
+.skill-desc{
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.skill-desc:hover{
+    color: #BBE1FA;
+    transition: all 0.5s ease-in-out 0s; 
+}
+
+/*◘◘◘ Projects ◘◘◘*/
+
+#projects{
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+
+    background-color: black;
+    color: #5B8FB9;
+}
+
+#project-section-title{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+    background: linear-gradient(to right,black,#301E67,black);
+    width: 100%;
+}
+
+.project-card{
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.project-image{
+    align-self: center;
+    width: 350px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+.project-image:hover{
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 0px 0px 20px 10px #301E67;
+}
+
+.project-title{
+    font-variant: small-caps;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #BBE1FA;
+}
+
+.project-description{
+    font-size: 1.5rem;
+}
+
+.project-description:hover{
+    transition: all 0.5s ease-in-out 0s;
+    color: #BBE1FA; 
+}
+
+.project-body button{
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    background-color:rgb(125, 188, 188);
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.project-body button:hover{
+    transition: all 0.5s ease-in-out 0s;
+    background-color: rgb(71, 97, 97);
+    color: #BBE1FA;
+}
+
+/*◘◘◘ Contact Me ◘◘◘*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #301E67;
+
+    padding: 10px;
+    background-color: black;
+    color: #5B8FB9;
+}
+
+#contact-section-title{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+    background: linear-gradient(to right,black,#301E67,black);
+    width: 100%;
+}
+
+#contact-profiles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 5rem;
+    color: #ffffff;
+}
+
+#contact-text{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 50%;
+}
+
+#contact-profiles li{
+    list-style: none;
+    filter: invert();
+    filter: drop-shadow(black);
+}
+
+#contact-profiles img:hover{
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 0px 0px 20px #989898;
+}
+
+
+/*◘◘◘ Footer ◘◘◘*/
+footer{
+    text-align: center;
+    background: linear-gradient(to right,#301E67,#85a7be);
+    margin: 0px;
+    padding: 1px;
+    font-size: 1.2rem;
+}
+
+
+/* ◘◘◘ RESUME SUB WEBSITE ◘◘◘ */
+.resume{
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+
+    background-color: black;
+    color: #5B8FB9;
+}
+
+#resume-section-title{
+    color: #a4d3f3;
+    background: linear-gradient(to right,black,#301E67,black);
+}
+
+.resumeContentHead{
+    color: #85a7be;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    margin: 5px;
+
+    animation: resumeHeadAnimate 1.2s ease-in-out 0s 1 normal forwards;
+}
+@keyframes resumeHeadAnimate {
+    from{
+        position: relative;
+        right : 500px;
+    }
+    to{
+        position: relative;
+        right:  -10px;
+    }
+}
+
+.resumeCard{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.resumeBody{
+    width: 50%;
+    margin: 5px;
+    animation: resumanimate 2s ease-in-out 0s 1 normal forwards;
+}
+@keyframes resumanimate {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.resumeBody span{
+    color: aqua;
+}
+
+.resumeLink a{
+    text-decoration: none;
+    margin: 5px;
+    color: #a5d7c8;
+}
+
+.resumeLink a:hover{
+    transition: all 0.5s ease-in-out 0s;
+    color:#ffffff;
+}
+
+
+/* ◘◘◘ Media Query for devices below 700 and above 440px (Tablets and Mobile Phones) ◘◘◘*/
+@media only screen and (min-width:441px) and (max-width:700px) {
+    header{
+        /* display: none; */
+        overflow: scroll;
+    }
+
+    header li:nth-child(3), header li:nth-child(4){ 
+        display: none;
+    }
+
+    #main::before{
+        content: "";
+        background: url('./images/profile_full_new_cpy.png') no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+        z-index: -1;
+        box-shadow: inset 0px 0px 45px 5px black;
+    }
+
+
+    /* skills */
+    #skills{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+    }
+
+    #skill-section-title{
+        font-size: 2.5rem;
+    }
+
+    .skill-desc{
+        display: none;
+    }
+
+    .skill-image{
+        height: 3em;
+    }
+
+    .skill-head{
+        font-size: 1em;
+    }
+
+    #project-section-title{
+        font-size: 2.5rem;
+    }
+
+    .project-title{
+        font-size: 1.5rem;
+    }
+
+    .project-image{
+        align-self: center;
+        width: 150px;
+        height: 100px;
+        border-radius: 10%;
+    }
+
+    .project-description{
+        display: none;
+    }
+
+    .project-body button{
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        border: none;
+        background-color:paleturquoise;
+        text-align: center;
+        /* padding: 5px; */
+        border-radius: 10px;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    #contact-profiles{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 2rem;
+        color: #ffffff;
+    }
+}
+
+/* Media query for small mobiles <440px */
+@media only screen and (max-width:440px) {
+    header{
+        display: none;
+    }
+
+    /* main */
+    #main{
+        height: fit-content;
+    }
+
+    .resumedrive a{
+        display: block;
+    }
+
+    #main::before{
+        content: "";
+        background: url('./images/profile_full.png') no-repeat center center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+        z-index: -1;
+        box-shadow: inset 0px 0px 45px 5px black;
+    }
+
+    #main img{
+        display: inline-block;
+        height: 2em;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+    #main ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: scroll;
+    }
+
+    #main ul li{
+        list-style-type: circle;
+    }
+
+    /* skills */
+    #skills{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+
+    #skill-section-title{
+        font-size: 2.5rem;
+    }
+
+    .skill-desc{
+        display: none;
+    }
+
+    .skill-image{
+        height: 3rem;
+    }
+
+    .skill-head{
+        font-size: 1em;
+    }
+
+    /* projects */
+    #projects{
+        overflow: scroll;
+    }
+
+    .project-card{
+        border: 1px solid black;
+        display: grid;
+        grid-gap: 0px;
+        padding: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #project-section-title{
+        font-size: 2.5rem;
+    }
+
+    .project-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* align-content: center;    */
+    }
+
+    .project-title{
+        font-size: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-image{
+        align-self: center;
+        width: 75%;
+        height: auto;
+        border-radius: 10%;
+
+        margin: 0px 10%;
+    }
+
+    .project-description{
+        display: none;
+    }
+
+    .project-body button{
+        font-size: 75%;
+        font-family: 'Josefin Sans', sans-serif;
+        border: none;
+        background-color:paleturquoise;
+        text-align: center;
+        /* padding: 5px; */
+        border-radius: 10px;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    /* Contact */
+    #contact{
+        overflow: scroll;
+    }
+
+    #contact-section-title{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #contact-text{
+        font-size: 1rem;
+        text-align: justify;
+        width: 75%;
+    }
+
+    #contact-profiles{
+        display: grid;
+        /* width: 50%; */
+        gap: 20px;
+
+    }
+
+    #contact-profiles img{
+        height: 25px;
+    }
+}
+
+/* CLASS ADDED USING JS */
