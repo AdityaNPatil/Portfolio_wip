@@ -1,0 +1,65 @@
+body {
+    background-color: #4F200D;
+    color: #F6F1E9;
+    box-sizing: border-box;
+}
+
+#levelTitle {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 15px;
+}
+
+#red{background-color: red;}
+#yellow{background-color: yellow;}
+#blue{background-color: rgb(81, 81, 255);}
+#green{background-color: green;}
+
+.mainContainer{
+    height: fit-content;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 500px){
+    #levelTitle{
+        text-align: center;
+    }
+    .container{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Game Over */
+.gameOver{
+    background-color: red;
+}
